@@ -1,10 +1,10 @@
 import newService from './js/apiService;'
-import {searchForm, photosContainer} from "./refs";
-import photosTemplate from '..templates/photos.hbs'
+import {searchForm, imagesContainer} from "./refs";
+import imagesTemplate from '..templates/images.hbs'
 
-function updatePhotosMarkup(photos) {
-    const markup = photosTemplate(photos);
-  photosContainer.insertAdjacentHTML('beforeend', markup);    
+function updateImagesMarkup(images) {
+    const markup = imagesTemplate(images);
+  imagesContainer.insertAdjacentHTML('beforeend', markup);    
 }
 
 searchForm.addEventListener('submit', searchFormSubmitHandler);
@@ -13,20 +13,20 @@ function searchFormSubmitHandler(event) {
     event.preventDefault();
     const form = event.currentTarget;
     newService.query = form.elements.query.value;
-    clearPhotosContainer();
+    clearImagesContainer();
   newService.resetPage();
     form.reset();
-    fetchPhotos();
+    fetchImages();
 }
 
-function fetchPhotos() {
+function fetchImages() {
 
-newService.fetchPhotos().then(photos => {
-    updatePhotosMarkup(photos);
+newService.fetchImages().then(images => {
+    updateImagesMarkup(images);
   });
 }
 
-function clearPhotosContainer() {
-  refs.photosContainer.innerHTML = '';
+function clearImagesContainer() {
+  refs.imagesContainer.innerHTML = '';
 }
-// export default updatePhotosMarkup;
+// export default updateimagesMarkup;

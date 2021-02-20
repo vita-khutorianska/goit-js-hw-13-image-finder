@@ -5,7 +5,7 @@
 export default {
     searchQuery: "",
     page = 1,
-    fetchPhotos(searchQuery) {
+    fetchiImages(searchQuery) {
     const url= `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${searchQuery}&page=${this.page}&per_page=12&key=apiKey`
     const options = {
         headers: {
@@ -13,9 +13,9 @@ export default {
         
        },
    }
-        return fetch(url, options).then(res => res.json()).then(({ photos }) => {
+        return fetch(url, options).then(res => res.json()).then(({ images }) => {
             this.page += 1;
-            return photos; }).catch(error => console.log(error));
+            return images; }).catch(error => console.log(error));
     },
     resetPage() {
         this.page = 1;

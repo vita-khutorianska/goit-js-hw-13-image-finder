@@ -1,2 +1,2 @@
-// import './js/updatePhotosMarkup';
+// import './js/updateimagesMarkup';
 // import '.js/apiServise'
