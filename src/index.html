@@ -12,23 +12,26 @@
 </head>
 
 <body>
-    <form class="form-inline search-form js-search-form">
-        <div class="form-group mx-sm-3 mb-2">
-            <label for="searchQuery" class="sr-only"></label>
-            <input type="text" class="form-control" name="query" id="searchQuery" placeholder=""
-                autocomplete="off" />
+    <div class="container"> 
+        <div class="form-section"> 
+            <!-- <h2 class="title">Поиск Картинки</h2> -->
+            <form class="form-inline search-form js-search-form">
+                <label for="searchQuery" class="sr-only"></label>
+                <input type="text" class="form-control" name="query" id="searchQuery" placeholder="Type image name" autocomplete="off" />
+                </div>
+                <button type="submit" class="button btn-primary">Искать</button>
+            </form>
         </div>
-        <button type="submit" class="btn btn-primary mb-2">Искать</button>
-    </form>
-
+</div>
+  
     
     
-    <ul class="images js-images"></ul>
-    <button type="button" class="btn btn-primary button is-hidden " data-action="loading">
+    <ul class="gallery js-images"></ul>
+    <!-- <button type="button" class="btn btn-primary button is-hidden " data-action="loading">
         <span class="spinner-border spinner-border-sm spinner " role="status" aria-hidden="true"></span>
     
         <span class="label">Загружается...</span>
-    </button>
+    </button> -->
    
      
 </body>

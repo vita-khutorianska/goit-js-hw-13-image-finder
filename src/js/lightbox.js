@@ -1,6 +1,6 @@
 import * as basicLightbox from 'basiclightbox'
 import {imagesContainer } from './refs'
-import 'basicLightbox/src/styles/main.scss';
+// import 'basicLightbox/src/main.scss';
 
  const lightBox = () => {
 

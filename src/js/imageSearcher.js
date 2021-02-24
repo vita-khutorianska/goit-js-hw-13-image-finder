@@ -1,6 +1,7 @@
 import newService from './apiService';
 import refs from "./refs";
 import updateImagesMarkup from './updeteImagesMarkup';
+import lightBox from './lightbox'
 // import infinityScroll from './scroll'
 
 refs.searchForm.addEventListener('submit', searchFormSubmitHandler);
@@ -16,8 +17,8 @@ function searchFormSubmitHandler(event) {
     newService.resetPage();
     form.reset();
  
-    
 }
+ lightBox();
 
 function fetchImages() {
 
