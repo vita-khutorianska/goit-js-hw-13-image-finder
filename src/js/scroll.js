@@ -1,5 +1,5 @@
-import {imagesContainer } from './refs'
-import fetchImage from './imageSearcher';
+import refs from './refs'
+import fetchImages from './apiService';
 
 export default function infinityScroll() {
   console.log("infinityScroll");
@@ -14,10 +14,10 @@ export default function infinityScroll() {
       console.log('obs', observer)
       if (entry.isIntersecting) {
         observer.unobserve(entry.target);
-        fetchImage();
+        fetchImages();
       }
     })
   };
   const observer = new IntersectionObserver(obs, options);
-  observer.observe(imagesContainer.lastElementChild);
+  observer.observe(refs.imagesContainer.lastElementChild);
 }

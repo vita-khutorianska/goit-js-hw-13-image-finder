@@ -1,10 +1,10 @@
 import * as basicLightbox from 'basiclightbox'
-import {imagesContainer } from './refs'
+// import refs from './refs'
 // import 'basicLightbox/src/main.scss';
 
  const lightBox = () => {
 
-    imagesContainer.addEventListener('click', openModal)
+    refs.imagesContainer.addEventListener('click', openModal)
     function openModal(event) {
         
    

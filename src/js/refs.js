@@ -1,4 +1,5 @@
-const searchForm = document.querySelector('.js-search-form');
+const searchForm = document.querySelector('.search-form');
 const imagesContainer = document.querySelector('.js-images')
 // const spinner = document.querySelector('#spinner')
-export default { searchForm, imagesContainer };
+const listItem = document.querySelector('.item');
+export default { searchForm, imagesContainer, listItem };
