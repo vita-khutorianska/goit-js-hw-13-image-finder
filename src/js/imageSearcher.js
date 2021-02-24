@@ -1,8 +1,8 @@
 import newService from './apiService';
 import refs from "./refs";
 import updateImagesMarkup from './updeteImagesMarkup';
-import lightBox from './lightbox'
- import infinityScroll from './scroll'
+import lightBox from './lightbox';
+import infinityScroll from './scroll';
 
 refs.searchForm.addEventListener('submit', searchFormSubmitHandler);
 
