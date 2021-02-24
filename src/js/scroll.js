@@ -1,5 +1,5 @@
 import refs from './refs'
-import fetchImages from './apiService';
+import fetchImages from './imageSearcher';
 
 export default function infinityScroll() {
   console.log("infinityScroll");
