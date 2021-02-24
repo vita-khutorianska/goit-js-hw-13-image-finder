@@ -8,6 +8,7 @@
     <title>PHOTO</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 
 <body>
@@ -20,9 +21,16 @@
         <button type="submit" class="btn btn-primary mb-2">Искать</button>
     </form>
 
-    <ul class="images js-images"></ul>
-
     
+    
+    <ul class="images js-images"></ul>
+    <button type="button" class="btn btn-primary button is-hidden " data-action="loading">
+        <span class="spinner-border spinner-border-sm spinner " role="status" aria-hidden="true"></span>
+    
+        <span class="label">Загружается...</span>
+    </button>
+   
+     
 </body>
 
 </html>
