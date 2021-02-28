@@ -3,6 +3,9 @@ import refs from "./refs";
 import updateImagesMarkup from './updeteImagesMarkup';
 import lightBox from './lightbox';
 import infinityScroll from './scroll';
+import { info, error } from '@pnotify/core';
+import '@pnotify/core/dist/PNotify.css';
+import '@pnotify/core/BrightTheme.css';
 
 refs.searchForm.addEventListener('submit', searchFormSubmitHandler);
 
@@ -12,11 +15,17 @@ function searchFormSubmitHandler(event) {
     event.preventDefault();
     const form = event.currentTarget;
   newService.query = form.elements.query.value;
-  if (newService.query === '') {
-  error({
-      text: "enter querly",
-      delay: 600
-  });
+    if (newService.query === '') {
+        error({
+            text: "enter querly",
+            delay: 200
+        });
+    }
+         if (newService.query.length  <= 2) {
+      info ({
+      text: ' Put more letters'
+    });
+      
         refs.imagesContainer.innerHTML = '';
         return
   }
