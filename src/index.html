@@ -9,11 +9,33 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <!-- <link href="node_modules/@pnotify/core/dist/BrightTheme.css" rel="stylesheet" type="text/css" />
-    <link href="node_modules/@pnotify/core/dist/PNotify.css" rel="stylesheet" type="text/css" /> -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    
 </head>
 
-<body>
+<body class='light-theme'>
+    <div class="toolbar">
+        <!-- Разметка переключателя темы -->
+        <div class="theme-switch">
+            <svg class="theme-switch__icon" role="img" aria-label="Иконка солнца">
+                <use href="./images/sprite.svg#sun"></use>
+            </svg>
+
+            <div class="theme-switch__control">
+                <input class="theme-switch__toggle" type="checkbox" name="theme" id="theme-switch-toggle"
+                    aria-label="Переключить между тёмной и светлой темой" />
+                <label aria-hidden="true" class="theme-switch__track" for="theme-switch-toggle">
+                </label>
+                <div aria-hidden="true" class="theme-switch__marker"></div>
+            </div>
+
+            <svg class="theme-switch__icon" aria-label="Иконка луны">
+                <use href="./images/sprite.svg#moon"></use>
+            </svg>
+        </div>
+    </div>
+
+
     <div class="container"> 
         <div class="form-section"> 
             <h2 class="title">Image Finder</h2>
@@ -28,7 +50,7 @@
   
     
     
-    <ul class="gallery js-images"></ul>
+    <ul class="gallery js-images" class='light-theme'></ul>
   
 <!-- <script src="toastr.js"></script>
       -->

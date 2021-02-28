@@ -15,15 +15,10 @@ function searchFormSubmitHandler(event) {
     event.preventDefault();
     const form = event.currentTarget;
   newService.query = form.elements.query.value;
-    if (newService.query === '') {
-        error({
-            text: "enter querly",
-            delay: 200
-        });
-    }
-         if (newService.query.length  <= 2) {
+  if (newService.query.length  <= 2) {
       info ({
-      text: ' Put more letters'
+          text: ' Put more letters',
+         delay: 200 
     });
       
         refs.imagesContainer.innerHTML = '';
